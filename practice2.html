@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        #paragraph
+        {
+            font-family: 'Comic Sans MS', cursive;
+            font-size: 12px;
+            border: 5px solid black;
+            width: 500px;
+            background-color: white;
+            line-height: 2;
+            color: black;
+            background-color: white;
+            
+            
+
+        }
+    </style>
+    <body>
+    <h1>Harrison Wendt Practice 2</h1>
+    <div id="paragraph">
+        paragraph that changes colors. Random words to make a paragraph. Hopefully this works !!!
+        <br>
+        <br>
+    </div>
+    <script type="text/javascript">
+        function change_style() {
+            var bord_r = document.getElementById("bord_r").value;
+            var bord_g = document.getElementById("bord_g").value;
+            var bord_g = document.getElementById("bord_g").value;
+            var border_width = document.getElementById("border_width").value;
+            var backg_r = document.getElementById("backg_r").value;
+            var backg_g = document.getElementById("backg_g").value;
+            var backg_b = document.getElementById("backg_b").value;
+    
+            var tag = document.getElementById("paragraph");
+            tag.style.borderColor = `rgb(${bord_r},${bord_g},${bord_g})`;
+            tag.style.borderWidth = `${border_width}px`;
+            tag.style.backgroundColor = `rgb(${backg_r},${backg_g},${backg_b})`;
+    }
+        </script>
+        Border R(0-255): <input type="text" id="bord_r" value=""> <br>
+        Border G(0-255): <input type="text" id="bord_g" value=""> <br>
+        Border B(0-255): <input type="text" id="bord_g" value=""> <br>
+        Border Width: <input type="text" id="border_width" value=""> <br>
+        Background R(0-255): <input type="text" id="backg_r" value=""> <br>
+        Background G(0-255): <input type="text" id="backg_g" value=""> <br>
+        Background B(0-255): <input type="text" id="backg_b" value=""> <br>
+        <button onclick="change_style()">Apply Changes</button> <br>
+
+    </body>
+</html>
